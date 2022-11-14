@@ -1,0 +1,117 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Poppins", sans-serif
+}
+
+body {
+    font-size: 16px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+.students:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.chat {
+    height: 300px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-input-placeholder {
+    color: .711
+}
+
+input {
+    border: 0;
+    padding: 15px;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 90%;
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+#bot {
+    margin-right: auto;
+}
+
+#user {
+    margin-left: auto;
+}
+
+
+.bot {
+    font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,
+        monospace;
+}
+
+.avatar {
+    height: 25px;
+}
+
+.response {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 980px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .chat {
+        width: 75vw;
+        margin: 10vw;
+    }
+}
