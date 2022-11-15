@@ -54,14 +54,31 @@
                 </tr>
                 <tr>
                     <td>First Year</td>
-                    <td class="popup" onclick="onClickDud();">25
-                        <span class="popuptext" id="myPopup">A Simple Popup!</span>
+                    <td class="popup" id="firstYear" onclick="onClickCompletedCourses(this.id);">25
+                        <span class="popuptext" id="firstYearPopup">
+                            APSC 100 <br>
+                            APSC 101 <br>
+                            APSC 160 <br>
+                            MATH 108 <br>
+                            MATH 158 <br>
+                        </span>
                     </td>
-                    <td onclick="onClickDud();">-</td>
+                    <td onclick=" onClickMissingCourses();">-
+                        <span class="popuptext" id="firstYearMissing">
+                            None
+                        </span>
+                    </td>
                 </tr>
                 <tr>
                     <td>Second Year</td>
-                    <td onclick="onClickDud();">13</td>
+                    <td class="popup" id="secondYear" onclick="onClickCompletedCourses(this.id);">13
+                        <span class="popuptext" id="secondYearPopup">
+                            CPEN 211 <br>
+                            CPEN 261 <br>
+                            ELEC 201 <br>
+                            CPEN 291 <br>
+                        </span>
+                    </td>
                     <td onclick="onClickDud();">10</td>
                 </tr>
                 <tr>
@@ -221,6 +238,16 @@
             popup.classList.toggle("show");
         }
 
+        function onClickCompletedCourses(id) {
+            var popup = document.getElementById(`${id}Popup`);
+            console.log(popup.classList);
+            popup.classList.toggle("show");
+        }
+
+        function onClickMissingCourses() {
+            var popup = document.getElementById("firstYearMissing");
+            popup.toggle("show");
+        }
         // Chatbot code
 
         const utterances = [
