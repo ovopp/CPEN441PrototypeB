@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dylan's Snowboard Trip Planner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="DNExperiment.css">
+</head>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"
+        style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+            style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64">
+                <img src="./assets/skitrip.png" style="max-height: 150px; margin: auto; padding-left: 50px;">
+            </h3>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Dylan's Advanced Snowboard Trip Requirement Report</b></h1>
+            <hr style="width:50px;border:5px solid blue" class="w3-round">
+            <table id="basic">
+                <tr>
+                    <th style="width: 40%;">Basic Level</th>
+                    <th>Complete</th>
+                    <th>Current Progress</th>
+                    <th>Missing</th>
+                    <th>Used Progress</th>
+                </tr>
+                <tr>
+                    <td><i>Basic Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
+                        survival)</td>
+                    <td id="firstYear">&#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Basic Avalanche Prevention <br> Basic Wilderness Survival</td>
+                </tr>
+                <tr>
+                    <td><i>Basic Snowboard Training</i> <br> (Both Snowboard Techniques and Snowboard Jumping) </td>
+                    <td id="firstYear"> &#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Basic Snowboard Techniques <br> Basic Snowboard Jumping</td>
+                </tr>
+                <tr>
+                    <td><i>Basic Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
+                    <td id="firstYear">&#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Parka <br>
+                        Toque <br>
+                        Face Mask <br>
+                        Snow Pants <br>
+                        Gloves
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+            <table id="intermediate">
+                <tr>
+                    <th style="width: 40%;">Intermediate Level</th>
+                    <th>Complete</th>
+                    <th>Current Progress</th>
+                    <th>Missing</th>
+                    <th>Used Progress</th>
+                </tr>
+                <tr>
+                    <td><i>Intermediate Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
+                        survival)</td>
+                    <td>&#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Intermediate Avalanche Prevention <br> Intermediate Wilderness Survival</td>
+                </tr>
+                <tr>
+                    <td><i>Intermediate Snowboard Training</i> <br> Intermediate Snowboard Techniques </td>
+                    <td> &#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Intermediate Snowboard Techniques</td>
+                </tr>
+                <tr>
+                    <td><i>Intermediate Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
+                    <td>&#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Parka <br>
+                        Toque <br>
+                        Face Mask <br>
+                        Snow Pants <br>
+                        Gloves
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table id="advanced">
+                <tr>
+                    <th style="width: 40%;">Advanced Level</th>
+                    <th>Complete</th>
+                    <th>Current Progress</th>
+                    <th>Missing</th>
+                    <th>Used Progress</th>
+                </tr>
+                <tr>
+                    <td><i>Advanced Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
+                        survival)</td>
+                    <td>&#10004;</td>
+                    <td></td>
+                    <td></td>
+                    <td>Advanced Avalanche Prevention <br> Advanced Wilderness Survival</td>
+                </tr>
+                <tr>
+                    <td><i>Advanced Snowboard Training</i> <br> Advanced Snowboard Techniques </td>
+                    <td> &#10004;</td>
+                    <td>Advanced Snowboard Techniques</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i>Advanced Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
+                    <td>&#10004;</td>
+                    <td></td>
+                    <td>
+                    </td>
+                    <td>
+                        Thick Snow Pants <br>
+                        Thick Parka <br>
+                        Gloves <br>
+                        Toque <br>
+                        Face Mask <br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <script>
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        var taken_courses = {
+            'basic': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques',
+            ],
+            'intermediate': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques'
+            ],
+            'advanced': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques'
+            ],
+            'equipment': [
+                'Thick Parka',
+                'Toque',
+                'Face Mask',
+                'Thin Snow Pants',
+                'Insulated Gloves'
+            ]
+        }
+
+        var required_courses = {
+            'basic': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques',
+                    'Ski Jumping'],
+                [
+                    'Parka', 'Toque', 'Face Mask', 'Snow Pants', 'Gloves'
+                ]
+            ],
+            'intermediate': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques'],
+                [
+                    'Thick Parka', 'Toque', 'Face Mask', 'Snow Pants', 'Insulated Gloves'
+                ]
+            ],
+            'advanced': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques'],
+                [
+                    'Thick Parka', 'Toque', 'Face Mask', 'Thick Snow Pants', 'Insulated Gloves'
+                ]
+            ]
+        }
+
+        // const basicTable = document.getElementById("basic");
+        // const intermediateTable = document.getElementById("intermediate");
+        // const advancedTable = document.getElementById("advanced");
+        // Object.keys(required_courses).forEach(key => {
+        //     var rows = required_courses[key];
+        //     var rowHtml = `<tr><td><i>${capitalizeFirstLetter(key)} Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+        //                 wilderness
+        //                 survival)</td>`;
+        //     var takenCourses = taken_courses[key];
+        //     rows.forEach(row => {
+        //         var completeHtml = ``;
+        //         var currentHtml = ``;
+        //         var missingHtml = ``;
+        //         var usedHtml = ``;
+        //         row.forEach(item => {
+        //             if (item in takenCourses) {
+        //                 usedHtml += `${item}\n`;
+        //             }
+        //             else {
+        //                 missingHtml += `${item}\n`;
+        //             }
+        //         });
+        //         completeHtml = missingHtml.length != 0 ? `&#10004` : `&#10060`
+        //         completeHtml = `<td>${completeHtml}</td>`;
+        //         currentHtml = `<td>${currentHtml}</td>`;
+        //         missingHtml = `<td>${missingHtml}</td>`;
+        //         usedHtml = `<td>${usedHtml}</td>`;
+        //         rowHtml += completeHtml + currentHtml + missingHtml + usedHtml + '</tr>';
+        //     });
+        //     if (key == 'basic') {
+        //         basicTable.innerHTML += rowHtml;
+        //     }
+        //     else if (key == 'intermediate') {
+        //         intermediateTable.innerHTML += rowHtml;
+        //     } else {
+        //         advancedTable.innerHTML += rowHtml;
+        //     }
+        // });
+
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+        function formSubmit() {
+            window.alert("Form submitted");
+        }
+
+        function onClickDud() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+        function onClickCompletedCourses(id) {
+            var popup = document.getElementById(`${id}Popup`);
+            console.log(popup.classList);
+            popup.classList.toggle("show");
+        }
+
+        function onClickMissingCourses() {
+            var popup = document.getElementById("firstYearMissing");
+            popup.toggle("show");
+        }
+
+    </script>
+
+</body>
+
+</html>

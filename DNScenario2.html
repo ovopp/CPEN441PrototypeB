@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Advanced Ski Trip Planner</title>
+    <title>Daisy's Ski Trip Planner</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -38,7 +38,7 @@
 
         <!-- Header -->
         <div class="w3-container" style="margin-top:80px" id="showcase">
-            <h1 class="w3-xxxlarge w3-text-blue"><b>Advanced Ski Trip Requirement Report</b></h1>
+            <h1 class="w3-xxxlarge w3-text-blue"><b>Daisy's Advanced Snowboard Trip Requirement Report</b></h1>
             <hr style="width:50px;border:5px solid blue" class="w3-round">
             <table id="basic">
                 <tr>
@@ -49,7 +49,8 @@
                     <th>Used Progress</th>
                 </tr>
                 <tr>
-                    <td><i>Basic Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction, wilderness
+                    <td><i>Basic Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
                         survival)</td>
                     <td id="firstYear">&#10004;</td>
                     <td></td>
@@ -57,22 +58,22 @@
                     <td>Basic Avalanche Prevention <br> Basic Wilderness Survival</td>
                 </tr>
                 <tr>
-                    <td><i>Basic Ski Training</i> <br> (Both Ski Techniques and Ski Jumping) </td>
-                    <td id="firstYear"> &#10060;</td>
+                    <td><i>Basic Snowboard Training</i> <br> (Both Snowboard Techniques and Snowboard Jumping) </td>
+                    <td id="firstYear"> &#10004;</td>
                     <td></td>
-                    <td>Basic Ski Jumping</td>
-                    <td>Basic Ski Techniques</td>
+                    <td></td>
+                    <td>Basic Snowboard Techniques <br> Basic Snowboard Jumping</td>
                 </tr>
                 <tr>
                     <td><i>Basic Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
                     <td id="firstYear">&#10004;</td>
                     <td></td>
                     <td></td>
-                    <td>Thick Parka <br>
+                    <td>Parka <br>
                         Toque <br>
                         Face Mask <br>
-                        Thin Snow Pants <br>
-                        Insulated Gloves
+                        Snow Pants <br>
+                        Gloves
                     </td>
                 </tr>
             </table>
@@ -87,7 +88,8 @@
                     <th>Used Progress</th>
                 </tr>
                 <tr>
-                    <td><i>Intermediate Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction, wilderness
+                    <td><i>Intermediate Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
                         survival)</td>
                     <td>&#10004;</td>
                     <td></td>
@@ -95,22 +97,22 @@
                     <td>Intermediate Avalanche Prevention <br> Intermediate Wilderness Survival</td>
                 </tr>
                 <tr>
-                    <td><i>Intermediate Ski Training</i> <br> Intermediate Ski Techniques </td>
+                    <td><i>Intermediate Snowboard Training</i> <br> Intermediate Snowboard Techniques </td>
                     <td> &#10004;</td>
                     <td></td>
                     <td></td>
-                    <td>Intermediate Ski Techniques</td>
+                    <td>Intermediate Snowboard Techniques</td>
                 </tr>
                 <tr>
                     <td><i>Intermediate Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
                     <td>&#10004;</td>
                     <td></td>
                     <td></td>
-                    <td>Thick Parka <br>
+                    <td>Parka <br>
                         Toque <br>
                         Face Mask <br>
-                        Thin Snow Pants <br>
-                        Insulated Gloves
+                        Snow Pants <br>
+                        Gloves
                     </td>
                 </tr>
             </table>
@@ -124,29 +126,32 @@
                     <th>Used Progress</th>
                 </tr>
                 <tr>
-                    <td><i>Advanced Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction, wilderness
+                    <td><i>Advanced Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+                        wilderness
                         survival)</td>
-                    <td>&#10004;</td>
-                    <td></td>
+                    <td>&#10060;</td>
                     <td></td>
                     <td>Advanced Avalanche Prevention <br> Advanced Wilderness Survival</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><i>Advanced Ski Training</i> <br> Advanced Ski Techniques </td>
+                    <td><i>Advanced Snowboard Training</i> <br> Advanced Snowboard Techniques </td>
                     <td> &#10060;</td>
                     <td></td>
-                    <td>Advanced Ski Techniques</td>
+                    <td>Advanced Snowboard Techniques</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><i>Advanced Equipment</i> <br> (Parka, Toque, Face Mask, Snow Pants, Gloves)</td>
                     <td>&#10060;</td>
                     <td></td>
-                    <td>Thick Snow Pants</td>
-                    <td>Thick Parka <br>
+                    <td>Thick Snow Pants <br>
+                        Thick Parka <br>
+                        Gloves <br>
+                    </td>
+                    <td>
                         Toque <br>
                         Face Mask <br>
-                        Insulated Gloves
                     </td>
                 </tr>
             </table>
@@ -156,6 +161,102 @@
     </div>
 
     <script>
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        var taken_courses = {
+            'basic': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques',
+            ],
+            'intermediate': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques'
+            ],
+            'advanced': [
+                'Avalanche Prevention',
+                'Wilderness Survival',
+                'Ski Techniques'
+            ],
+            'equipment': [
+                'Thick Parka',
+                'Toque',
+                'Face Mask',
+                'Thin Snow Pants',
+                'Insulated Gloves'
+            ]
+        }
+
+        var required_courses = {
+            'basic': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques',
+                    'Ski Jumping'],
+                [
+                    'Parka', 'Toque', 'Face Mask', 'Snow Pants', 'Gloves'
+                ]
+            ],
+            'intermediate': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques'],
+                [
+                    'Thick Parka', 'Toque', 'Face Mask', 'Snow Pants', 'Insulated Gloves'
+                ]
+            ],
+            'advanced': [
+                ['Avalanche Prevention',
+                    'Wilderness Survival'],
+                ['Ski Techniques'],
+                [
+                    'Thick Parka', 'Toque', 'Face Mask', 'Thick Snow Pants', 'Insulated Gloves'
+                ]
+            ]
+        }
+
+        // const basicTable = document.getElementById("basic");
+        // const intermediateTable = document.getElementById("intermediate");
+        // const advancedTable = document.getElementById("advanced");
+        // Object.keys(required_courses).forEach(key => {
+        //     var rows = required_courses[key];
+        //     var rowHtml = `<tr><td><i>${capitalizeFirstLetter(key)} Mountain Training</i> <br> (Any 2 from Avalanche prevention, weather prediction,
+        //                 wilderness
+        //                 survival)</td>`;
+        //     var takenCourses = taken_courses[key];
+        //     rows.forEach(row => {
+        //         var completeHtml = ``;
+        //         var currentHtml = ``;
+        //         var missingHtml = ``;
+        //         var usedHtml = ``;
+        //         row.forEach(item => {
+        //             if (item in takenCourses) {
+        //                 usedHtml += `${item}\n`;
+        //             }
+        //             else {
+        //                 missingHtml += `${item}\n`;
+        //             }
+        //         });
+        //         completeHtml = missingHtml.length != 0 ? `&#10004` : `&#10060`
+        //         completeHtml = `<td>${completeHtml}</td>`;
+        //         currentHtml = `<td>${currentHtml}</td>`;
+        //         missingHtml = `<td>${missingHtml}</td>`;
+        //         usedHtml = `<td>${usedHtml}</td>`;
+        //         rowHtml += completeHtml + currentHtml + missingHtml + usedHtml + '</tr>';
+        //     });
+        //     if (key == 'basic') {
+        //         basicTable.innerHTML += rowHtml;
+        //     }
+        //     else if (key == 'intermediate') {
+        //         intermediateTable.innerHTML += rowHtml;
+        //     } else {
+        //         advancedTable.innerHTML += rowHtml;
+        //     }
+        // });
+
         // Script to open and close sidebar
         function w3_open() {
             document.getElementById("mySidebar").style.display = "block";
