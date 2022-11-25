@@ -7,6 +7,10 @@ h5 {
     font-family: "Poppins", sans-serif
 }
 
+hr {
+    
+    width: 50%;
+}
 body {
     font-size: 16px;
 }
@@ -14,14 +18,15 @@ body {
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 
 td,
 th {
     border: 1px solid #dddddd;
     text-align: center;
-    padding: 8px;
+    padding: 40px;
+
 }
 
 td:hover {
